@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Footer } from "./Footer";
+import { Paywall } from "./Paywall";
 
 const SUPABASE_URL = "https://mfhwrokeslqdbbkczbdv.supabase.co";
 const SUPABASE_KEY = "sb_publishable_jdtI2oVIdZrBdQlFHOoXlQ_nIpNtsWU";
-const STRIPE_LINK = "https://buy.stripe.com/test_14AfZi4VmeIvgPx0lP7IY00";
 const FACTURE_MIN = 20;
 const FACTURE_MAX = 500;
 
@@ -229,8 +230,8 @@ export default function Home() {
 
       {paid && (
         <div className="mb-6 rounded-lg border border-green-300 bg-green-50 p-4 text-sm text-green-900">
-          Merci ! Ton paiement (mode test) est bien passé. Je te recontacte très
-          vite pour activer ta surveillance.
+          Merci ! Ton paiement est bien passé. Je te recontacte très vite pour
+          activer ta surveillance.
         </div>
       )}
 
@@ -361,20 +362,7 @@ export default function Home() {
               )}
             </div>
 
-            <div className="mt-6 rounded-lg border border-amber-300 bg-amber-50 p-4">
-              <h3 className="font-bold">Surveillance et alertes — 5 €/mois</h3>
-              <p className="mt-2 text-sm text-stone-700">
-                Je surveille les offres à ta place et je te préviens dès qu&apos;un
-                meilleur contrat apparaît. (Paiement en mode test pour
-                l&apos;instant.)
-              </p>
-              <a
-                href={STRIPE_LINK}
-                className="mt-3 block w-full rounded-lg bg-stone-900 px-5 py-3 text-center font-bold text-white hover:bg-stone-700"
-              >
-                Activer la surveillance — 5 €/mois
-              </a>
-            </div>
+            <Paywall low={result.low} high={result.high} />
 
             <button
               onClick={restart}
@@ -386,9 +374,7 @@ export default function Home() {
         )}
       </div>
 
-      <footer className="mt-10 text-center text-xs text-stone-400">
-        © Kilowatt
-      </footer>
+      <Footer />
     </main>
   );
 }
