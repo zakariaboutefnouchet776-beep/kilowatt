@@ -16,8 +16,8 @@ export const PUBLISHER = {
 
 // Liens de paiement Stripe (Payment Links). Tant qu'un lien est `null`, le bouton reste inactif.
 export const STRIPE_LINKS = {
-  monthly: null as string | null,
-  yearly: null as string | null,
+  monthly: "https://buy.stripe.com/6oUaEYfA09ob2YH6Kd7IY02" as string | null,
+  yearly: "https://buy.stripe.com/cNi5kEafG57V1UDd8B7IY03" as string | null,
 };
 
 export const GUARANTEE_DAYS = 14;
