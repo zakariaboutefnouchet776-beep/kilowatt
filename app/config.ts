@@ -5,12 +5,12 @@ export const SITE_URL = "https://kilowatt-kappa.vercel.app";
 // Coordonnées de l'éditeur (mentions légales, CGV, confidentialité, garantie).
 export const PUBLISHER = {
   name: "Zakaria Boutefnouchet" as string | null, // Nom et prénom, ou raison sociale
-  legalForm: null as string | null, // ex. « Entrepreneur individuel », « SRL », « SAS »
-  registration: null as string | null, // SIRET (France) ou numéro BCE (Belgique)
-  address: "26 rue de la Station, Chênée (Liège), Belgique" as string | null, // Adresse postale complète
+  legalForm: "Ditta individuale (entreprise individuelle, Italie)" as string | null, // ex. « Entrepreneur individuel », « SRL », « SAS »
+  registration: "Partita IVA 04904740612 (Italie)" as string | null, // SIRET (France) ou numéro BCE (Belgique)
+  address: "Via Gaetano Donizetti 43, Castel Volturno (CE), Italie" as string | null, // Adresse postale complète
   email: "zakariaboutefnouchet776@gmail.com" as string | null, // E-mail de contact
   publicationDirector: "Zakaria Boutefnouchet" as string | null, // Directeur de la publication
-  vat: null as string | null, // N° de TVA, ou « TVA non applicable »
+  vat: "IT04904740612" as string | null, // N° de TVA, ou « TVA non applicable »
   mediator: null as string | null, // Médiateur de la consommation (obligatoire pour vendre en France)
 };
 
