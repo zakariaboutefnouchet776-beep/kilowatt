@@ -8,7 +8,7 @@ export const PUBLISHER = {
   legalForm: null as string | null, // ex. « Entrepreneur individuel », « SRL », « SAS »
   registration: null as string | null, // SIRET (France) ou numéro BCE (Belgique)
   address: null as string | null, // Adresse postale complète
-  email: null as string | null, // E-mail de contact
+  email: "zakariaboutefnouchet776@gmail.com" as string | null, // E-mail de contact
   publicationDirector: null as string | null, // Directeur de la publication
   vat: null as string | null, // N° de TVA, ou « TVA non applicable »
   mediator: null as string | null, // Médiateur de la consommation (obligatoire pour vendre en France)
