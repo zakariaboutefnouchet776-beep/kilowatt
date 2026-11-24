@@ -60,9 +60,8 @@ export function Paywall({ low, high }: { low: number; high: number }) {
         .{" "}
         {coversPrice ? (
           <>
-            L&apos;abonnement annuel coûte {yearly.priceLabel}, soit moins de{" "}
-            <strong>{Math.max(1, Math.ceil((yearly.price / low) * 100))} %</strong>{" "}
-            de l&apos;économie minimale estimée.
+            L&apos;abonnement annuel coûte {yearly.priceLabel} : il est couvert
+            même avec l&apos;économie minimale estimée.
           </>
         ) : (
           <>
