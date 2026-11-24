@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Confidentialite() {
   return (
-    <LegalLayout title="Politique de confidentialité" updated="3 novembre 2026">
+    <LegalLayout title="Politique de confidentialité" updated="24 novembre 2026">
       <h2>Qui est responsable de tes données</h2>
       <p>
         <Field value={PUBLISHER.name} label="nom ou raison sociale" />,{" "}
@@ -86,7 +86,8 @@ export default function Confidentialite() {
         <Field value={PUBLISHER.email} label="e-mail de contact" />. Nous
         répondons sous un mois. Tu peux aussi introduire une réclamation auprès
         de l&apos;autorité de protection des données de ton pays (en France, la
-        CNIL ; en Belgique, l&apos;APD).
+        CNIL ; en Belgique, l&apos;APD ; en Italie, le Garante per la
+        protezione dei dati personali).
       </p>
     </LegalLayout>
   );

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function MentionsLegales() {
   return (
-    <LegalLayout title="Mentions légales" updated="3 novembre 2026">
+    <LegalLayout title="Mentions légales" updated="24 novembre 2026">
       <h2>Éditeur du site</h2>
       <ul>
         <li>
@@ -20,8 +20,8 @@ export default function MentionsLegales() {
           Statut : <Field value={PUBLISHER.legalForm} label="forme juridique" />
         </li>
         <li>
-          Immatriculation (SIRET ou numéro BCE) :{" "}
-          <Field value={PUBLISHER.registration} label="SIRET ou numéro BCE" />
+          Immatriculation :{" "}
+          <Field value={PUBLISHER.registration} label="numéro d'immatriculation" />
         </li>
         <li>
           Adresse : <Field value={PUBLISHER.address} label="adresse postale" />

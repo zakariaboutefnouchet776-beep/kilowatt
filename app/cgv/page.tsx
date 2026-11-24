@@ -19,12 +19,12 @@ export default function Cgv() {
   const yearly = PLANS.find((p) => p.id === "yearly")!;
 
   return (
-    <LegalLayout title="Conditions générales de vente" updated="3 novembre 2026">
+    <LegalLayout title="Conditions générales de vente" updated="24 novembre 2026">
       <h2>1. Vendeur</h2>
       <p>
         Le service est proposé par{" "}
         <Field value={PUBLISHER.name} label="nom ou raison sociale" />,{" "}
-        <Field value={PUBLISHER.registration} label="SIRET ou numéro BCE" />,{" "}
+        <Field value={PUBLISHER.registration} label="numéro d'immatriculation" />,{" "}
         <Field value={PUBLISHER.address} label="adresse postale" />. Contact :{" "}
         <Field value={PUBLISHER.email} label="e-mail de contact" />.
       </p>

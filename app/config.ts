@@ -6,7 +6,7 @@ export const SITE_URL = "https://kilowatt-kappa.vercel.app";
 export const PUBLISHER = {
   name: "Zakaria Boutefnouchet" as string | null, // Nom et prénom, ou raison sociale
   legalForm: "Ditta individuale (entreprise individuelle, Italie)" as string | null, // ex. « Entrepreneur individuel », « SRL », « SAS »
-  registration: "Partita IVA 04904740612 (Italie)" as string | null, // SIRET (France) ou numéro BCE (Belgique)
+  registration: "Partita IVA 04904740612 (Italie)" as string | null, // Numéro d'immatriculation (Partita IVA en Italie)
   address: "Via Gaetano Donizetti 43, Castel Volturno (CE), Italie" as string | null, // Adresse postale complète
   email: "zakariaboutefnouchet776@gmail.com" as string | null, // E-mail de contact
   publicationDirector: "Zakaria Boutefnouchet" as string | null, // Directeur de la publication
