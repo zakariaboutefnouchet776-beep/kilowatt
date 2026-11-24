@@ -10,7 +10,7 @@ export const PUBLISHER = {
   address: "Via Gaetano Donizetti 43, Castel Volturno (CE), Italie" as string | null, // Adresse postale complète
   email: "zakariaboutefnouchet776@gmail.com" as string | null, // E-mail de contact
   publicationDirector: "Zakaria Boutefnouchet" as string | null, // Directeur de la publication
-  vat: "IT04904740612" as string | null, // N° de TVA, ou « TVA non applicable »
+  vat: "TVA non applicable" as string | null, // N° de TVA, ou « TVA non applicable »
   mediator: null as string | null, // Médiateur de la consommation (obligatoire pour vendre en France)
 };
 
