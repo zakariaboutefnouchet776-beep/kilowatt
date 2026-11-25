@@ -20,6 +20,13 @@ export const STRIPE_LINKS = {
   yearly: "https://buy.stripe.com/eVqfZa1Jx2xXazif9na3u01" as string | null,
 };
 
+// Audit de facture d'énergie : paiement unique, rendu sous 24 h, remboursé si aucune économie.
+export const AUDIT = {
+  link: "https://buy.stripe.com/fZu6oA3RF5K9cHqgdra3u02" as string | null,
+  priceLabel: "19 €",
+  delay: "24 h",
+};
+
 export const GUARANTEE_DAYS = 14;
 export const REFUND_DELAY = "5 jours ouvrés";
 export const CANCEL_DELAY = "2 jours ouvrés";

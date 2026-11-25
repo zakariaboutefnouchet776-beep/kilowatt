@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { LegalLayout } from "../LegalLayout";
 import { Field } from "../Todo";
 import {
+  AUDIT,
   CANCEL_DELAY,
   GUARANTEE_DAYS,
   PLANS,
@@ -19,7 +20,7 @@ export default function Cgv() {
   const yearly = PLANS.find((p) => p.id === "yearly")!;
 
   return (
-    <LegalLayout title="Conditions générales de vente" updated="24 novembre 2026">
+    <LegalLayout title="Conditions générales de vente" updated="25 novembre 2026">
       <h2>1. Vendeur</h2>
       <p>
         Le service est proposé par{" "}
@@ -37,6 +38,14 @@ export default function Cgv() {
         pour changer de fournisseur. L&apos;estimation gratuite proposée sur le
         site n&apos;est pas soumise à abonnement.
       </p>
+      <p>
+        Kilowatt propose aussi un audit de facture d&apos;énergie, sans
+        abonnement : après le paiement, le client envoie sa dernière facture par
+        e-mail à <Field value={PUBLISHER.email} label="e-mail de contact" /> et
+        reçoit sous {AUDIT.delay} l&apos;économie annuelle estimée, l&apos;offre
+        conseillée et la marche à suivre pour changer de fournisseur. Le délai
+        de {AUDIT.delay} court à partir de la réception de la facture.
+      </p>
 
       <h2>3. Prix</h2>
       <ul>
@@ -45,6 +54,9 @@ export default function Cgv() {
         </li>
         <li>
           Formule annuelle : {yearly.priceLabel} {yearly.period}.
+        </li>
+        <li>
+          Audit de facture : {AUDIT.priceLabel}, paiement unique.
         </li>
       </ul>
       <p>
@@ -79,6 +91,15 @@ export default function Cgv() {
         de paiement utilisé. Ce délai de {GUARANTEE_DAYS} jours correspond au
         droit de rétractation prévu pour les consommateurs en cas de vente à
         distance.
+      </p>
+      <p>
+        Audit de facture : si l&apos;audit ne trouve aucune économie possible,
+        il est remboursé intégralement sous {REFUND_DELAY}. En demandant que
+        l&apos;audit soit réalisé dans le délai de {AUDIT.delay}, le client
+        accepte que la prestation commence avant la fin du délai de
+        rétractation ; une fois l&apos;audit entièrement livré, le droit de
+        rétractation ne s&apos;applique plus, la garantie « aucune économie =
+        remboursé » restant valable.
       </p>
 
       <h2>7. Limites du service</h2>

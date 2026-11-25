@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Footer } from "./Footer";
 import { Paywall } from "./Paywall";
+import { AuditOffer } from "./AuditOffer";
 
 const SUPABASE_URL = "https://mfhwrokeslqdbbkczbdv.supabase.co";
 const SUPABASE_KEY = "sb_publishable_jdtI2oVIdZrBdQlFHOoXlQ_nIpNtsWU";
@@ -255,6 +256,7 @@ export default function Home() {
               Gratuit, sans inscription. Pensé pour les foyers et petits locaux
               pro qui n&apos;ont jamais changé de contrat.
             </p>
+            <AuditOffer />
           </section>
         )}
 
@@ -361,6 +363,8 @@ export default function Home() {
                 </>
               )}
             </div>
+
+            <AuditOffer compact />
 
             <Paywall low={result.low} high={result.high} />
 
