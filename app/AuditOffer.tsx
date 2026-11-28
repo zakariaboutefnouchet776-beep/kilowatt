@@ -1,44 +1,61 @@
 import { AUDIT, PUBLISHER } from "./config";
 
+const MAILTO = `mailto:${PUBLISHER.email}?subject=${encodeURIComponent(
+  "Diagnostic gratuit de ma facture"
+)}&body=${encodeURIComponent(
+  "Bonjour,\n\nVoici ma dernière facture d'énergie (photo ou PDF en pièce jointe).\n\nMerci !"
+)}`;
+
 export function AuditOffer({ compact = false }: { compact?: boolean }) {
   return (
     <div className="mt-8 rounded-xl border-2 border-amber-500 bg-amber-50 p-5">
       <p className="text-xs font-bold uppercase tracking-wide text-amber-700">
-        Audit de ta facture par un humain
+        Commerçants et petits locaux pro
       </p>
       <h3 className="mt-1 text-xl font-extrabold leading-tight">
-        Je vérifie ta facture et je te dis exactement combien tu paies de trop
+        Je vérifie gratuitement votre facture et je vous dis si vous payez trop
+        cher
       </h3>
       {!compact && (
-        <ul className="mt-3 space-y-1 text-sm text-stone-700">
-          <li>✓ Tu m&apos;envoies ta dernière facture (photo ou PDF)</li>
+        <ol className="mt-3 space-y-1 text-sm text-stone-700">
           <li>
-            ✓ Sous {AUDIT.delay}, tu reçois l&apos;économie chiffrée en €/an et
-            l&apos;offre moins chère à prendre
+            1. Vous m&apos;envoyez votre dernière facture (photo ou PDF).
           </li>
-          <li>✓ La marche à suivre pour changer, sans coupure</li>
-        </ul>
+          <li>
+            2. Sous {AUDIT.delay}, je vous dis <strong>gratuitement</strong> si
+            une économie est possible et combien elle représente par an.
+          </li>
+          <li>
+            3. Si vous voulez le plan détaillé (offre moins chère et marche à
+            suivre pour changer, sans coupure) : {AUDIT.priceLabel}, une seule
+            fois.
+          </li>
+        </ol>
       )}
-      <p className="mt-4 text-3xl font-extrabold">
-        {AUDIT.priceLabel}{" "}
-        <span className="text-sm font-medium text-stone-600">
-          une seule fois, sans abonnement
-        </span>
+      <p className="mt-4 text-sm font-bold text-green-800">
+        Aucune économie trouvée ? Vous ne payez rien.
       </p>
-      <p className="mt-1 text-sm font-bold text-green-800">
-        Remboursé si je ne te trouve aucune économie.
-      </p>
-      {AUDIT.link ? (
+      {PUBLISHER.email ? (
         <a
-          href={AUDIT.link}
+          href={MAILTO}
           className="mt-4 block w-full rounded-lg bg-amber-500 px-5 py-3 text-center font-bold text-white hover:bg-amber-600"
         >
-          Je veux mon audit à {AUDIT.priceLabel}
+          Envoyer ma facture gratuitement
         </a>
       ) : null}
       <p className="mt-3 text-xs text-stone-500">
-        Après le paiement, envoie ta facture à{" "}
-        <strong>{PUBLISHER.email}</strong>. {PUBLISHER.vat}.
+        Ou par e-mail à <strong>{PUBLISHER.email}</strong>.
+        {AUDIT.link ? (
+          <>
+            {" "}
+            Déjà reçu votre diagnostic ?{" "}
+            <a href={AUDIT.link} className="underline">
+              Commander le plan détaillé ({AUDIT.priceLabel})
+            </a>
+            .
+          </>
+        ) : null}{" "}
+        {PUBLISHER.vat}.
       </p>
     </div>
   );

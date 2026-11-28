@@ -40,11 +40,13 @@ export default function Cgv() {
       </p>
       <p>
         Kilowatt propose aussi un audit de facture d&apos;énergie, sans
-        abonnement : après le paiement, le client envoie sa dernière facture par
-        e-mail à <Field value={PUBLISHER.email} label="e-mail de contact" /> et
-        reçoit sous {AUDIT.delay} l&apos;économie annuelle estimée, l&apos;offre
-        conseillée et la marche à suivre pour changer de fournisseur. Le délai
-        de {AUDIT.delay} court à partir de la réception de la facture.
+        abonnement. Le client envoie sa dernière facture par e-mail à{" "}
+        <Field value={PUBLISHER.email} label="e-mail de contact" /> et reçoit
+        gratuitement, sous {AUDIT.delay}, un diagnostic indiquant si une
+        économie est possible et son montant annuel estimé. Ce diagnostic est
+        sans engagement. S&apos;il le souhaite, le client peut ensuite commander
+        le plan détaillé (offre conseillée et marche à suivre pour changer de
+        fournisseur), livré sous {AUDIT.delay} après le paiement.
       </p>
 
       <h2>3. Prix</h2>
@@ -56,7 +58,8 @@ export default function Cgv() {
           Formule annuelle : {yearly.priceLabel} {yearly.period}.
         </li>
         <li>
-          Audit de facture : {AUDIT.priceLabel}, paiement unique.
+          Diagnostic de facture : gratuit. Plan détaillé :{" "}
+          {AUDIT.priceLabel}, paiement unique.
         </li>
       </ul>
       <p>
