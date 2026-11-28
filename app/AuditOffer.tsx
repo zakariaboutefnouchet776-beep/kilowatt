@@ -17,7 +17,7 @@ export function AuditOffer({ compact = false }: { compact?: boolean }) {
         cher
       </h3>
       {!compact && (
-        <ol className="mt-3 space-y-1 text-sm text-stone-700">
+        <ul className="mt-3 space-y-1 text-sm text-stone-700">
           <li>
             1. Vous m&apos;envoyez votre dernière facture (photo ou PDF).
           </li>
@@ -30,7 +30,7 @@ export function AuditOffer({ compact = false }: { compact?: boolean }) {
             suivre pour changer, sans coupure) : {AUDIT.priceLabel}, une seule
             fois.
           </li>
-        </ol>
+        </ul>
       )}
       <p className="mt-4 text-sm font-bold text-green-800">
         Aucune économie trouvée ? Vous ne payez rien.
